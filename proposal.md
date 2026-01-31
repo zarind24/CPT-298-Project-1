@@ -47,7 +47,21 @@ Include:
 - Core features or capabilities
 - Explicit exclusions (what the project will *not* include)
 
-We plan to build a discord bot that answers a lot of the basic questions students have. Anything from requesting username to requesting discord participation status. This bot is intended to help save time on the student and professor, answering basic questions that don't need to take hours to get answered. We plan to add a !username command that will prompt the students username that only the student who prompted it can see. Then we have a !status command that shows how good their participation is with a meter and a !rank command to show their rank compared to others in the class. Then we will have a !classes command that shows what classes you are taking that semester to the discord to help show others what classes you are in. This could spark conversations with others and make it easy to find help if they are in the same classes. Another command we will implement is the office hours of the professor, !office hours aswell as !classtimes so students can easily figure out when they can schedule a meeting with the professor and when his class times are. The !classtimes command will also be useful if students forget what time their class starts. This bot will however, not include a way to schedule these meetings. The bot will also not include information about classes such as: grades, due dates, and what the description of the class is. This bot will also not include a !password command to ensure their account can stay secure. 
+We plan to build a discord bot that answers a lot of the basic questions students have. Anything from requesting username to requesting discord participation status. This bot is intended to help save time on the student and professor, answering basic questions that don't need to take hours to get answered. We plan to add a !username command that will prompt the students username that only the student who prompted it can see. Then we have a !status command that shows how good their participation is with a meter and a !rank command to show their rank compared to others in the class. Then we will have a !classes command that shows what classes you are taking that semester to the discord to help show others what classes you are in. This could spark conversations with others and make it easy to find help if they are in the same classes. Another command we will implement is the office hours of the professor, 
+
+---- Brett Note ------
+
+!office hours aswell as !classtimes so students can easily figure out when they can schedule a meeting with the professor and when his class times are. 
+
+Note: This may be challenging to do - I would want to tie this in automatically with my O365 calendar and getting school approval for the API keys required is not likely to happen.  Having an easy way to get at the bookings link to schedule office hours (which has my updated meeting and class schedule!) would probably be a lot easier!
+
+
+
+The !classtimes command will also be useful if students forget what time their class starts. This bot will however, not include a way to schedule these meetings. The bot will also not include information about classes such as: grades, due dates, and what the description of the class is. This bot will also not include a !password command to ensure their account can stay secure. 
+
+Note: Same as the above here - linking this to Anthology would likely be a non-starter.  That said I think the items you mentioned above that are 100% within the purview of my classes (and technical control) are an EXCELLENT idea and exactly what I was thinking about for this project!
+
+---- End Brett Note ------
 
 ---
 
@@ -60,6 +74,17 @@ List the technologies you expect to use.  Please note that this solution MUST li
 - **Databases / Storage: sqlite3
 - **Infrastructure (VMs, containers, etc.): schools server and VM
 - **Tools (Git, CI, monitoring, APIs, etc.): GIT, GitHub
+
+---- Brett Note ------
+
+Note: If you could "dockerize" this application that would be awesome!  You'd need to research:
+
+- Dockerfile
+- Docker Compose
+
+for creating a docker image than running it.  It's an extra step but would make it super portable!  Entirely optional but worth learning about and utlilizing!
+
+---- End Brett Note ------
 
 ---
 
@@ -87,6 +112,12 @@ Include:
 - Optional stretch goals (if time permits)
 
 The absolute minimum would be a bot that gets the job done and doesn't have super fancy additives to it such as: fancy pictures, extra colors, and anything above and beyond the necessary base output. We plan to have easy to read/edit code that future students can read/edit to make changes or understand how the bot works. We also plan to set up a bot that not only gets the job done, but has a bit of flair to it so it looks nice and students actually want to interact with it. Our stretch goal would be to come back to the bot near the end of the semester and make changes after it has been used for a couple weeks, and has received input from others. 
+
+---- Brett Note ------
+
+Excellent!  Definitely make sure you have a "readme.md" file in this project which outlines some high level concepts of what your bot is, how it functions, and gives a starter for others who may want to modify it.  I'd also recommend renaming your project to something (for lack of better words) "cooler/sexier/what-have-you"  Really sell it!  This way we can have this project live on in perpetuity through additional feature requests like you mentino above and you'll have a public repository which shows your GitHub users contributing to open projects!
+
+---- End Brett Note ------
 
 ---
 
@@ -119,6 +150,12 @@ Include:
 - Mitigation strategies
 
 Discord could potentially get overwhelmed with too many messages to the bot causing the bot to crash. User data could get leaked if someone had malicious intent. The bot could accidentally leak someone's information such as their password if something goes wrong with the privacy feature. 4 weeks to get extra knowledge, complete the bot, and make sure it works properly is a short window considering we have other classes. The bot would rely solely on discord and if the school were to deny discord access that could scrap the whole project. A mitigation strategy we have is to not include a way for students to ask the bot for a password to their account. This will help reduce the risk of leaking personal information that could harm them and the school. 
+
+---- Brett Note ------
+
+Discord access is no problem, and I can get you a read-only service account to the cpt_program database as well as the appropritae views/tables when you're ready for it!  Can also provide you with alternative tables/views if you need them.  Like I mentioned O365 and Anthology access is likely not going to happen but the BULK of your features we should be able to complete without them!  My recommendation would be to scrap those features and just focus on the "core" which is username access and participation checking!  
+
+---- End Brett Note ------
 
 ---
 
@@ -175,6 +212,14 @@ Please be sure to consider any future tickets you may need to submit to complete
 A group VM to have access to work on the project together without having to both do the code separately or one person does all the code. We may need a way to have the bot live in the schools system. 
 
 A future ticket to consider could be improving the bot with any feedback from students in the future or adding a better version of the bot that includes other things related to the school.  
+
+---- Brett Note ------
+
+My recommendation for development would be to utilize this GitHub repository and complete it on your VMs.  This will get you practice with source control and sharing a project (learn about branches/merges/pull requests!) and allow both of you to develop simultaneously!  You could also utilize the "Issues" feature within GitHub for bug reports and new feature requests!  
+
+As for "publshing" the bot - I can either build you a production VM OR if possible I would love to host it on our (yet to be created) docker production instance.  This way we can host several of these "services" within our infrastructure in the same accessible environment!  
+
+---- End Brett Note ------
 
 ---
 
