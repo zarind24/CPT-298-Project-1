@@ -172,7 +172,7 @@ List any required resources:
 
 Please be sure to consider any future tickets you may need to submit to complete this work as those will need to be generated and assigned to the appropriate groups as soon as feasibly possible once the project kicks off to ensure timely delivery.  I will step in to help where required but you will likely be working with students in other classes so please be cognizant of their time!
 
-We will utilize GitHub a lot, relying on its easy to naviagate website. We will also use our VMs to do the coding of the bot. For teh publishing aspect we will either use a production VM or, if it is created by the project due date, the docker production instance. 
+We will utilize GitHub a lot, relying on its easy to naviagate website. We will also use our VMs to do the coding of the bot. For the publishing aspect we will either use a production VM or, if it is created by the project due date, the docker production instance. 
 
 A future ticket to consider could be improving the bot with any feedback from students in the future or adding a better version of the bot that includes other things related to the school.  
 
